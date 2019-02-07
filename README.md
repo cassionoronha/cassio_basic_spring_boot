@@ -9,6 +9,6 @@ To run this project, you can use the command:
 
 ## Authors
 
-* **Cassio  Noronha** - *Initial work* - [BasicSpringBootCassio](https://github.com/PurpleBooth)
+* **Cassio  Noronha** - *Initial work* - [BasicSpringBootCassio](http://github.com/cassionoronha/cassio_basic_spring_boot)
 
 
