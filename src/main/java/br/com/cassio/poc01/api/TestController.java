@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.Date;
 
 @RestController
-@RequestMapping("/test")
+@RequestMapping("/")
 public class TestController {
     @Value("${versao}")
     private String versao;
