@@ -19,7 +19,9 @@ public class TestController {
     @ResponseStatus(HttpStatus.OK)
     public String ping() {
         Date d = new Date();
-        return "Dockerized version: " + versao + " --- Now: " + d.toString();
+        String s = "Dockerized version: " + versao + " --- Now: " + d.toString();
+        System.out.printl(s)
+        return s;
     }
 
 

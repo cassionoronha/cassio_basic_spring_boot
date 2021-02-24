@@ -1,0 +1,58 @@
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+  name: basic-spring-boot-deployment
+  namespace: demonstracao
+spec:
+  selector:
+    matchLabels:
+      component: basic-spring-boot-pod
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        component: basic-spring-boot-pod
+    spec:
+      securityContext:
+        runAsNonRoot: true
+        runAsUser: 1000
+        runAsGroup: 3000
+      containers:
+        - name: basic-spring-boot-container
+          image: cassionoronha/basicspringboot:0.1b
+          imagePullPolicy: Always
+          securityContext:
+            allowPrivilegeEscalation: false
+            capabilities:
+              drop:
+                - ALL
+          resources:
+            limits:
+              cpu: 1
+              memory: 600Mi
+            requests:
+              cpu: 500m
+              memory: 300Mi
+          # livenessProbe:
+          #   httpGet:
+          #     path: /
+          #     port: 8081
+          #   initialDelaySeconds: 60
+          #   periodSeconds: 30
+          #   timeoutSeconds: 120
+          #   failureThreshold: 5
+          # readinessProbe:
+          #   httpGet:
+          #     path: /
+          #     port: 8081
+          #   initialDelaySeconds: 60
+          #   periodSeconds: 30
+          #   timeoutSeconds: 120
+          #   failureThreshold: 5
+          env:
+            - name: LOG_PATH
+              valueFrom:
+                configMapKeyRef:
+                  name: config-map-basic-spring-boot
+                  key: log_caminho
+
