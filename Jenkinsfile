@@ -1,4 +1,6 @@
     pipeline {
+        agent any 
+        
         tools { 
             maven 'MAVEN362'
             jdk "JAVA9" 
