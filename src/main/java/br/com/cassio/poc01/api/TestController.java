@@ -20,7 +20,7 @@ public class TestController {
     public String ping() {
         Date d = new Date();
         String s = "Dockerized version: " + versao + " --- Now: " + d.toString();
-        System.out.printl(s);
+        System.out.println(s);
         return s;
     }
 
