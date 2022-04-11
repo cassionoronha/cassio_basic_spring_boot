@@ -1,0 +1,19 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: ingress-basic-spring-boot
+  namespace: cassio-basic-spring-boot
+  annotations:
+spec:
+  ingressClassName: nginx
+  rules:
+    - http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: basic-spring-boot-service
+                port:
+                  number: 80
+      host: cassio-basic-spring-boot.localhost
