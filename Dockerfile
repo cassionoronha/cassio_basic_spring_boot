@@ -3,9 +3,9 @@ FROM azul/zulu-openjdk-alpine:11-jre
 LABEL author="Cassio Noronha"
 LABEL email="cassionoronha@gmail.com"
 LABEL company="AgilizaTI"
-LABEL version="1.0b" 
+LABEL version="0.3b"
 
-ENV LOG_PATH="vazio"
+ENV LOG_PATH="."
 
 RUN addgroup -g 3000 agilizatigroup
 RUN adduser -D -g '' -G agilizatigroup -u 1000 agilizati
