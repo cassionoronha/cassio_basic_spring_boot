@@ -1,0 +1,7 @@
+insert into user_sistema values (1, 'email1@company.com', 'user1', 'pass1')
+insert into user_sistema values (2, 'email2@company.com', 'user2', 'pass2')
+insert into user_sistema values (3, 'email3@company.com', 'user3', 'pass3')
+insert into user_sistema values (4, 'email4@company.com', 'user4', 'pass4')
+insert into user_sistema values (5, 'email5@company.com', 'user5', 'pass5')
+insert into user_sistema values (6, 'email6@company.com', 'user6', 'pass6')
+insert into user_sistema values (7, 'email7@company.com', 'user7', 'pass7')
