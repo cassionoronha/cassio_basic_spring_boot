@@ -11,12 +11,15 @@ To run this project, you can use the command:
 ### Dockerized
 To build spring artfact
 > mvn clean package
+>  
 To build docker image
-> docker build -t agilizati/basicspringboot:0.1b .
+> docker build -t cassionoronha/basicspringboot:0.3b .
+> 
 To run in a docker container, on port 8183
-> docker run -p 8183:8080 -e LOG_PATH="." --name agilizati-basicspringboot agilizati/basicspringboot:0.1b
+> docker run -p 8183:8080 -e LOG_PATH="." -e db.host=<<HOST-URL>> -e db.database=<<DB-NAME>> -e db.username=<<DB-USER>> -e db.password=<<DB-PASSWORD>> --name agilizati-basicspringboot agilizati/basicspringboot:0.3b
+>
 To acesss
-> http://localhost:8183
+> http://localhost:8183/actuactor/health
 
 ## Authors
 
